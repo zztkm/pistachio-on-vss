@@ -1,0 +1,238 @@
+/*
+_______   ______   ______  
+/       \ /      | /      \ 
+$$$$$$$  |$$$$$$/ /$$$$$$  |
+$$ |__$$ |  $$ |  $$ \__$$/ 
+$$    $$/   $$ |  $$      \ 
+$$$$$$$/    $$ |   $$$$$$  |
+$$ |       _$$ |_ /  \__$$ |
+$$ |      / $$   |$$    $$/ 
+$$/       $$$$$$/  $$$$$$/  
+ */
+
+/* IMPORT FONT AWESOME CSS */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css);
+
+/* ROOT VARIABLES,
+YOU CAN CHANGE COLORS & WEIGHT HERE! */
+:root {
+  /* MAIN FONT SETTINGS */
+  --main-font-size: 20px;
+  --main-font-color: #000000;
+  /* TOP TITLE COLOR */
+  --title-color: #000000;
+  --title-shadow-color: #ffffff;
+  /* LINK COLOR SETTINGS */
+  --link-color: #ff2222;
+  --link-hover-color: #fdb1de;
+  /* SOCIAL ICON SETTINGS */
+  --social-font-size: 1.5rem;
+  --social-button-color: #a230ff;
+  --social-button-hover-color: #dbffe3;
+  /* GITHUB CORNER COLOR */
+  --github-corner-color: #000000;
+  --github-corner-inside-color: #f3ffe6;
+  /* DOGGO COLOR */
+  --doggo-color: #ff0000;
+}
+
+body {
+  color: var(--main-font-color);
+  margin: 0rem 0px 5rem 5rem;
+  font-family: "VT323", monospace;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+html {
+  font-size: var(--main-font-size);
+}
+
+/* TITLE SHADOW */
+.h1-title {
+  text-shadow: 0.2rem 0.2rem 0rem var(--title-shadow-color);
+  text-decoration: underline;
+}
+
+/* DOGGO SETTING */
+.doggo {
+  animation: flash 0.3s linear infinite;
+  margin-top: 2.2rem;
+  color: var(--doggo-color);
+  display: inline-block;
+  _display: inline;
+}
+
+@keyframes flash {
+
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+}
+
+
+/* HEADING */
+h1 {
+  font-size: 3rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 3rem 0 1rem 0;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+h5 {
+  font-size: 0.75rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+h6 {
+  font-size: 0.5rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+ul {
+  margin-inline-start: 1.2rem;
+}
+
+/* LINK & HOVER */
+a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+#title:any-link {
+  color: var(--title-color);
+  text-decoration: none;
+}
+
+#social:any-link {
+  color: var(--social-button-color);
+  text-decoration: none;
+}
+
+#social:hover {
+  color: var(--social-button-hover-color);
+  text-decoration: none;
+}
+
+/* SOCIAL ICONS */
+.social {
+  list-style: none;
+  margin: 1rem 0 2rem 0;
+  padding: 0;
+}
+
+.social>li {
+  font-size: var(--social-font-size);
+  display: inline-block;
+  padding-inline-end: 8px;
+}
+
+/* FOOTER & COPYRIGHT */
+.footer {
+  text-align: right;
+  font-size: 0.7rem;
+  margin-top: 4rem;
+}
+
+/* RESPONSIVE */
+/* SMART PHONE */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #16ff68;
+  }
+
+  h1 {
+    margin: 1rem 0rem;
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  ul {
+    margin-inline-start: -1rem;
+  }
+
+  .social>li {
+    font-size: 1.0rem;
+  }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #f1ff2d;
+  }
+
+  ul {
+    margin-inline-start: -1rem;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 767px) and (max-width: 1280px) {
+  body {
+    background-color: aqua;
+  }
+}
+
+/* GITHUB CORNERS */
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+
+  0%,
+  100% {
+    transform: rotate(0)
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg)
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
+}
